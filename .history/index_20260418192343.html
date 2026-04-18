@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precision Weather</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="app-body bg-default" id="appBody">
+
+    <main class="weather-app">
+        <header class="weather-search">
+            <input 
+                type="text" 
+                id="searchInput" 
+                class="weather-search__input" 
+                placeholder="Enter city name (e.g., Nairobi)"
+                aria-label="Search for a city"
+            >
+            <button id="searchBtn" class="weather-search__btn" aria-label="Search">🔍</button>
+        </header>
+
+        <div id="errorMsg" class="weather-error hidden">
+            City not found. Please try again.
+        </div>
+
+        <article id="weatherCard" class="weather-card hidden">
+            <div class="weather-card__header">
+                <h1 id="cityName" class="weather-card__city">City Name</h1>
+                <p id="localTime" class="weather-card__time">Mon, 10:00 AM</p>
+            </div>
+
+            <div class="weather-card__main">
+                <img id="weatherIcon" class="weather-card__icon" src="" alt="Weather Icon">
+                <div class="weather-card__temp-group">
+                    <span id="temperature" class="weather-card__temp">--</span>
+                    <span class="weather-card__unit">°C</span>
+                </div>
+                <p id="condition" class="weather-card__condition">Condition</p>
+            </div>
+
+            <div class="weather-card__details">
+                <div class="detail-box">
+                    <span class="detail-box__label">Feels Like</span>
+                    <span id="feelsLike" class="detail-box__value">--°C</span>
+                </div>
+                <div class="detail-box">
+                    <span class="detail-box__label">Humidity</span>
+                    <span id="humidity" class="detail-box__value">--%</span>
+                </div>
+                <div class="detail-box">
+                    <span class="detail-box__label">Wind Speed</span>
+                    <span id="windSpeed" class="detail-box__value">-- km/h</span>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
